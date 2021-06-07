@@ -1,6 +1,12 @@
 # RBXPlace API (Unofficial)
 This module helps you retrieve all listed items from https://rbx.place website.
 
+## Simple Installation
+
+```javascript
+npm install rbxplace
+```
+
 ## Simple Use
 
 ### Load RBXPlace Items
