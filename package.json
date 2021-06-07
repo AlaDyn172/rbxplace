@@ -1,0 +1,27 @@
+{
+  "name": "rbxplace",
+  "version": "1.0.0",
+  "description": "This module helps you retrieve all listed items from https://rbx.place website.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AlaDyn172/rbxplace.git"
+  },
+  "keywords": [
+    "Roblox",
+    "Scraper"
+  ],
+  "author": "AlaDyn172",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AlaDyn172/rbxplace/issues"
+  },
+  "homepage": "https://github.com/AlaDyn172/rbxplace#readme",
+  "devDependencies": {
+    "jquery-jsdom": "^1.0.0",
+    "puppeteer": "^10.0.0"
+  }
+}
