@@ -1,4 +1,4 @@
-const Items = [];
+var Items = [];
 
 const $ = require("jquery-jsdom");
 const puppeteer = require("puppeteer");
@@ -34,6 +34,7 @@ class Scraper {
         else forced();
 
         async function forced() {
+            Items = [];
             let req = await makeRequest(url);
             let items = $(req).find(`.Items .Item`);
             items.each((i, itm) => Items.push(formatItem(itm.innerHTML)));
@@ -70,7 +71,9 @@ function emitItems(t, cb) {
 }
 
 async function makeRequest(url) {
-    const browser = await puppeteer.launch();
+    const browser = await puppeteer.launch({
+        args: ['--no-sandbox']
+    });
     const page = await browser.newPage();
     await page.setDefaultNavigationTimeout(0);
     await page.goto(url, {
